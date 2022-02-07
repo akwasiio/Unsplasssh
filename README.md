@@ -13,7 +13,7 @@ To build this project you require:
   - Copy your app's Access Key, then add the following to your `local.properties`: 
 
 ```
-ACCESS_KEY="<YOUR ACCESS KEY"
+ACCESS_KEY="<YOUR ACCESS KEY>"
 ```
 
   

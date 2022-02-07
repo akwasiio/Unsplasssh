@@ -12,8 +12,9 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 @HiltViewModel
-class ImagesViewModel @Inject constructor(private val imagesDataSource: ImagesDataSource) : ViewModel() {
-    val photos: Flow<PagingData<Photo>> = Pager(PagingConfig(pageSize = 2)) {
+class ImagesViewModel @Inject constructor(private val imagesDataSource: ImagesDataSource) :
+    ViewModel() {
+    val photos: Flow<PagingData<Photo>> = Pager(PagingConfig(pageSize = 2), pagingSourceFactory = {
         PhotosPagingSource(imagesDataSource = imagesDataSource)
-    }.flow
+    }).flow
 }

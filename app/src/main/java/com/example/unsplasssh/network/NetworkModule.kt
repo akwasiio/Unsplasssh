@@ -19,10 +19,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    private val json = Json { ignoreUnknownKeys = true }
+
     @ExperimentalSerializationApi
     @Provides
     fun providesConverterFactory(): Converter.Factory {
-        return Json { ignoreUnknownKeys = true }.asConverterFactory("application/json".toMediaType())
+        return json.asConverterFactory("application/json".toMediaType())
     }
 
 

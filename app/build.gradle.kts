@@ -10,7 +10,8 @@ plugins {
 }
 
 val composeVersion = "1.1.0-rc01"
-val secretsPropsFile = rootProject.file("./local.properties")
+
+val secretsPropsFile = rootProject.file("local.properties")
 val secretsProperties = Properties()
 secretsProperties.load(FileInputStream(secretsPropsFile))
 
@@ -29,7 +30,7 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String", "CLIENT_ID", secretsProperties.getProperty("CLIENT_ID"))
+        buildConfigField("String", "CLIENT_ID", secretsProperties.getProperty("ACCESS_KEY"))
     }
 
     buildTypes {

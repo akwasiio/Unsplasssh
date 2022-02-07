@@ -14,6 +14,6 @@ import javax.inject.Inject
 @HiltViewModel
 class ImagesViewModel @Inject constructor(private val imagesDataSource: ImagesDataSource) : ViewModel() {
     val photos: Flow<PagingData<Photo>> = Pager(PagingConfig(pageSize = 2)) {
-        PhotosPagingSource(dataSource = imagesDataSource)
+        PhotosPagingSource(imagesDataSource = imagesDataSource)
     }.flow
 }

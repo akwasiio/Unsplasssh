@@ -10,7 +10,7 @@ plugins {
 }
 
 val composeVersion = "1.1.0-rc01"
-val secretsPropsFile = rootProject.file("./secrets.properties")
+val secretsPropsFile = rootProject.file("./local.properties")
 val secretsProperties = Properties()
 secretsProperties.load(FileInputStream(secretsPropsFile))
 

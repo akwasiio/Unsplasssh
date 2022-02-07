@@ -1,5 +1,6 @@
-package com.example.unsplasssh
+package com.example.unsplasssh.network
 
+import com.example.unsplasssh.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Response
 

@@ -16,11 +16,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.items
+import com.example.unsplasssh.ui.screens.ImagesViewModel
 import com.google.accompanist.coil.rememberCoilPainter
 
 @Composable
-fun ImagesScreen(mainViewModel: MainViewModel = hiltViewModel()) {
-    val photos = mainViewModel.photos.collectAsLazyPagingItems()
+fun ImagesScreen(imagesViewModel: ImagesViewModel = hiltViewModel()) {
+    val photos = imagesViewModel.photos.collectAsLazyPagingItems()
 
     LazyColumn(
         verticalArrangement = Arrangement.spacedBy(10.dp),

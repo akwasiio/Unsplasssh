@@ -1,4 +1,4 @@
-package com.example.unsplasssh.models
+package com.example.unsplasssh.network.models
 
 import kotlinx.serialization.Serializable
 

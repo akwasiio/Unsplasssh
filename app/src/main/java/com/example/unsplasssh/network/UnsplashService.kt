@@ -1,6 +1,6 @@
-package com.example.unsplasssh
+package com.example.unsplasssh.network
 
-import com.example.unsplasssh.models.Photo
+import com.example.unsplasssh.network.models.Photo
 import retrofit2.http.GET
 import retrofit2.http.Query
 

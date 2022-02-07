@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             UnsplassshTheme {
-                // A surface container using the 'background' color from the theme
                 ImagesScreen()
             }
         }
